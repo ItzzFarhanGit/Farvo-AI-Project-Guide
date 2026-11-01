@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Project Guide + Prompt Studio | FARVO Digital Company</title>
+<meta name="description" content="Learn to build a complete software project with ChatGPT and Claude AI in 7 steps, and generate a ready-to-paste Claude prompt with Prompt Studio. English and Tamil.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Project Guide + Prompt Studio | FARVO Digital Company">
+<meta property="og:description" content="7 hands-on steps and a free Prompt Studio that writes your full Claude prompt.">
+<!-- After your first Vercel deploy, replace YOUR-DOMAIN with your real domain so social previews show the FARVO logo -->
+<meta property="og:image" content="https://YOUR-DOMAIN.vercel.app/assets/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+/* Runs before paint: applies saved theme (no white flash in dark mode) and enables reveal animations only when JS works. */
+(function(){var t="light";try{var s=JSON.parse(localStorage.getItem("theme"));if(s==="dark"||s==="light")t=s;else if(window.matchMedia&&matchMedia("(prefers-color-scheme:dark)").matches)t="dark"}catch(e){}
+var d=document.documentElement;d.dataset.theme=t;d.classList.add("js");
+var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==="dark"?"#0a0818":"#ffffff"})();
+</script>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Noto+Sans+Tamil:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#steps" data-en="Skip to content" data-ta="உள்ளடக்கத்திற்குச் செல்">Skip to content</a>
+<div class="scrollbar" id="scrollbar" aria-hidden="true"></div>
+
+<header class="nav" id="top">
+  <a class="logo" href="#home" aria-label="FARVO AI Project Guide – Home">
+    <img class="logo-img" src="assets/images/farvo-logo-192.png" alt="FARVO logo" width="42" height="42">
+    <span class="logo-txt"><b data-en="AI Project Guide" data-ta="AI திட்ட வழிகாட்டி">AI Project Guide</b><small>by FARVO</small></span>
+  </a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  <nav id="menu" aria-label="Main">
+    <a href="#home" data-en="Home" data-ta="முகப்பு">Home</a>
+    <a href="#workflow" data-en="Workflow" data-ta="செயல்முறை">Workflow</a>
+    <a href="#steps" data-en="Learning Steps" data-ta="கற்றல் படிகள்">Learning Steps</a>
+    <a href="#studio" class="hl" data-en="Prompt Studio" data-ta="Prompt Studio">Prompt Studio</a>
+    <a href="#faq" data-en="FAQ" data-ta="கேள்விகள்">FAQ</a>
+    <a href="#founder" data-en="Founder" data-ta="நிறுவனர்">Founder</a>
+  </nav>
+  <div class="tools">
+    <a class="farvo-nav" href="https://farvodigital.netlify.app" target="_blank" rel="noopener noreferrer" title="FARVO Digital Company">FARVO</a>
+    <button id="lang" class="chip" aria-label="Language">தமிழ்</button>
+    <button id="theme" class="theme-btn" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+      <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>
+      <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span>
+  <div class="hero-text">
+    <p class="pill" data-en="For students and first-time builders" data-ta="மாணவர்களுக்கும் புதியவர்களுக்கும்">For students and first-time builders</p>
+    <h1 data-en="From a rough idea to a running project, using ChatGPT and Claude." data-ta="ஒரு எளிய யோசனையிலிருந்து இயங்கும் திட்டம் வரை — ChatGPT மற்றும் Claude உடன்.">From a rough idea to a running project, using ChatGPT and Claude.</h1>
+    <p class="lead" data-en="Follow seven hands-on steps, then let Prompt Studio write your complete Claude prompt in seconds." data-ta="ஏழு செயல்முறை படிகளைப் பின்பற்றுங்கள்; பிறகு Prompt Studio உங்கள் முழுமையான Claude prompt-ஐ சில விநாடிகளில் எழுதும்.">Follow seven hands-on steps, then let Prompt Studio write your complete Claude prompt in seconds.</p>
+    <div class="cta">
+      <a class="btn" href="#studio" data-en="Open Prompt Studio" data-ta="Prompt Studio-ஐத் திற">Open Prompt Studio</a>
+      <a class="btn ghost" href="#steps" id="start" data-en="Start step 1" data-ta="படி 1 தொடங்கு">Start step 1</a>
+    </div>
+    <div class="prog-wrap"><div class="prog"><i id="bar"></i></div><span id="pct">0%</span></div>
+  </div>
+  <div class="hero-media">
+    <img class="hero-img" src="assets/images/hero.jpg" alt="Mohamed Farhan working on a laptop and phone in a modern office" width="800" height="1076" fetchpriority="high">
+    <div class="hero-badge"><img src="assets/images/farvo-logo-192.png" alt="" width="44" height="44"><span><b>FARVO</b><small>Code · Design · Create</small></span></div>
+  </div>
+</section>
+
+<section id="workflow" class="sec reveal">
+  <h2 data-en="AI Project Workflow" data-ta="AI திட்ட செயல்முறை">AI Project Workflow</h2>
+  <p class="sub" data-en="ChatGPT plans and writes the prompt. Claude builds the files. You test and improve." data-ta="ChatGPT திட்டமிட்டு prompt எழுதும். Claude கோப்புகளை உருவாக்கும். நீங்கள் சோதித்து மேம்படுத்துவீர்கள்.">ChatGPT plans and writes the prompt. Claude builds the files. You test and improve.</p>
+  <ol class="flow" id="flow"></ol>
+</section>
+
+<section id="steps" class="sec reveal">
+  <h2 data-en="Learning Steps" data-ta="கற்றல் படிகள்">Learning Steps</h2>
+  <div class="pills" id="pills" role="tablist"></div>
+  <article class="card" id="card" aria-live="polite"></article>
+</section>
+
+<section id="studio" class="sec wide">
+  <div class="studio-head reveal">
+    <p class="pill"><span data-en="NEW" data-ta="புதியது">NEW</span> ✨</p>
+    <h2>Prompt Studio</h2>
+    <p class="sub" data-en="Type your project name, pick a few options and get a complete, error-proof prompt ready to paste into Claude." data-ta="உங்கள் திட்டப் பெயரை உள்ளிடுங்கள், சில விருப்பங்களைத் தேர்ந்தெடுங்கள்; Claude-இல் ஒட்டத் தயாரான முழுமையான prompt கிடைக்கும்.">Type your project name, pick a few options and get a complete, error-proof prompt ready to paste into Claude.</p>
+  </div>
+
+  <div class="studio-grid">
+    <form class="panel form reveal" id="sform" autocomplete="off" novalidate>
+      <div class="fgroup">
+        <label class="flabel" for="s-name"><span class="num">1</span><span data-en="Project name" data-ta="திட்டப் பெயர்">Project name</span></label>
+        <input type="text" id="s-name" maxlength="80" placeholder="e.g. Smart Hospital Management System" aria-describedby="s-name-msg" spellcheck="false">
+        <p class="hint" id="s-name-msg" role="status"></p>
+        <div class="examples"><span class="hint" data-en="Try an example:" data-ta="ஒரு உதாரணம்:">Try an example:</span><span id="s-examples"></span></div>
+      </div>
+
+      <div class="fgroup">
+        <div class="flabel"><span class="num">2</span><span data-en="Project type" data-ta="திட்ட வகை">Project type</span><button type="button" class="linkbtn" id="s-auto" hidden data-en="↺ Auto-detect" data-ta="↺ தானியங்கி">↺ Auto-detect</button></div>
+        <div class="types" id="s-types" role="group" aria-label="Project type"></div>
+      </div>
+
+      <div class="fgroup">
+        <div class="flabel"><span class="num">3</span><span data-en="Technology" data-ta="தொழில்நுட்பம்">Technology</span></div>
+        <div class="seg" id="s-stack" role="group" aria-label="Technology">
+          <button type="button" data-v="front" class="on" aria-pressed="true"><b>Frontend only</b><small data-en="HTML · CSS · JS — double-click to run" data-ta="HTML · CSS · JS — இருமுறை கிளிக் செய்தால் ஓடும்">HTML · CSS · JS — double-click to run</small></button>
+          <button type="button" data-v="php" aria-pressed="false"><b>PHP + MySQL</b><small data-en="Runs on XAMPP (localhost)" data-ta="XAMPP (localhost)-இல் ஓடும்">Runs on XAMPP (localhost)</small></button>
+        </div>
+      </div>
+
+      <div class="fgroup">
+        <div class="flabel"><span class="num">4</span><span data-en="Theme colour" data-ta="தீம் நிறம்">Theme colour</span></div>
+        <div class="swatches" id="s-colors" role="radiogroup" aria-label="Theme colour"></div>
+      </div>
+
+      <div class="fgroup">
+        <div class="flabel"><span class="num">5</span><span data-en="Features" data-ta="அம்சங்கள்">Features</span></div>
+        <div class="switches" id="s-opts"></div>
+      </div>
+
+      <div class="fgroup">
+        <label class="flabel" for="s-extra"><span class="num">6</span><span data-en="Extra ideas (optional)" data-ta="கூடுதல் யோசனைகள் (விருப்பம்)">Extra ideas (optional)</span></label>
+        <textarea id="s-extra" maxlength="1500" rows="4" data-ph-en="Paste ChatGPT's feature list, special modules or colour ideas here…" data-ph-ta="ChatGPT தந்த அம்சப் பட்டியல், சிறப்பு modules அல்லது நிற யோசனைகளை இங்கே ஒட்டுங்கள்…"></textarea>
+        <p class="hint"><span id="s-extra-count">0</span>/1500</p>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn big" id="s-gen"><span class="spin" aria-hidden="true"></span><span id="s-gen-txt" data-en="Generate prompt" data-ta="Prompt உருவாக்கு">Generate prompt</span></button>
+        <button type="button" class="btn ghost" id="s-reset" data-en="Reset" data-ta="மீட்டமை">Reset</button>
+      </div>
+    </form>
+
+    <div class="panel out-panel reveal" aria-label="Generated prompt">
+      <div class="out-top">
+        <div>
+          <h3 data-en="Your prompt" data-ta="உங்கள் prompt">Your prompt</h3>
+          <p class="hint" id="s-tag"></p>
+        </div>
+        <div class="stats" id="s-stats" aria-live="polite"></div>
+      </div>
+
+      <div class="ready" aria-live="polite">
+        <div class="ready-row"><span data-en="Prompt readiness" data-ta="Prompt தயார்நிலை">Prompt readiness</span><b id="s-ready-pct">0%</b></div>
+        <div class="ready-bar"><i id="s-ready-bar"></i></div>
+        <p class="hint" id="s-ready-hint"></p>
+      </div>
+
+      <div class="out-bar">
+        <button type="button" class="btn sm" id="s-copy"><span id="s-copy-txt" data-en="Copy prompt" data-ta="Prompt நகலெடு">Copy prompt</span></button>
+        <button type="button" class="btn sm ghost" id="s-dl" data-en="Download .txt" data-ta="பதிவிறக்கு .txt">Download .txt</button>
+        <a class="btn sm ghost" id="s-claude" href="https://claude.ai/new" target="_blank" rel="noopener noreferrer" data-en="Open Claude ↗" data-ta="Claude-ஐத் திற ↗">Open Claude ↗</a>
+      </div>
+
+      <pre id="s-out" tabindex="0" aria-label="Generated prompt text"></pre>
+
+      <ol class="next">
+        <li><b data-en="Copy" data-ta="நகலெடு">Copy</b> <span data-en="the prompt" data-ta="prompt-ஐ">the prompt</span></li>
+        <li><b data-en="Open" data-ta="திற">Open</b> <span data-en="a new Claude chat" data-ta="புதிய Claude chat-ஐ">a new Claude chat</span></li>
+        <li><b data-en="Paste & send" data-ta="ஒட்டி அனுப்பு">Paste & send</b> <span data-en="then download your ZIP" data-ta="பிறகு ZIP-ஐப் பதிவிறக்கு">then download your ZIP</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="sec reveal">
+  <h2 data-en="FAQ" data-ta="அடிக்கடி கேட்கப்படும் கேள்விகள்">FAQ</h2>
+  <div id="faqs"></div>
+</section>
+
+<section id="founder" class="sec reveal">
+  <div class="founder">
+    <div class="avatar-wrap">
+      <img class="avatar" src="assets/images/founder.jpg" alt="Mohamed Farhan, Founder &amp; CEO of FARVO Digital Company" width="600" height="600" loading="lazy">
+      <img class="avatar-badge" src="assets/images/farvo-logo-192.png" alt="FARVO logo" width="56" height="56" loading="lazy">
+    </div>
+    <div class="founder-info">
+      <h2 data-en="Connect with the founder" data-ta="நிறுவனருடன் இணையுங்கள்">Connect with the founder</h2>
+      <h3>Mohamed Farhan</h3>
+      <p data-en="Founder &amp; CEO – FARVO Digital Company" data-ta="நிறுவனர் &amp; தலைமை நிர்வாக அதிகாரி – FARVO Digital Company">Founder &amp; CEO – FARVO Digital Company</p>
+      <p class="muted" data-en="Full Stack Developer | UI/UX Designer" data-ta="Full Stack டெவலப்பர் | UI/UX வடிவமைப்பாளர்">Full Stack Developer | UI/UX Designer</p>
+      <div class="links">
+        <a class="btn sm" href="https://www.linkedin.com/in/mohamedfarhan-it" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.1c.5-1 1.8-1.9 3.7-1.9 4 0 4.6 2.6 4.6 6V21h-4v-5c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg>LinkedIn</a>
+        <a class="btn sm ghost" href="https://farvodigital.netlify.app/personal" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zm0 2c-4.4 0-8 2.2-8 5v2h16v-2c0-2.8-3.6-5-8-5z"/></svg><span data-en="Personal Portfolio" data-ta="தனிப்பட்ட Portfolio">Personal Portfolio</span></a>
+        <a class="btn sm ghost" href="https://farvodigital.netlify.app" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 9h-3a15 15 0 0 0-1.2-5A8 8 0 0 1 18.9 11zM12 4c.8 1 1.7 3 2 7H10c.3-4 1.2-6 2-7zM4.3 13h3a15 15 0 0 0 1.2 5A8 8 0 0 1 4.3 13zm3-2h-3A8 8 0 0 1 8.5 6a15 15 0 0 0-1.2 5zM12 20c-.8-1-1.7-3-2-7h4c-.3 4-1.2 6-2 7zm3.5-2a15 15 0 0 0 1.2-5h3a8 8 0 0 1-4.2 5z"/></svg><span data-en="Company Portfolio" data-ta="நிறுவன Portfolio">Company Portfolio</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="cols">
+    <div>
+      <div class="foot-brand"><img src="assets/images/farvo-logo-192.png" alt="FARVO logo" width="72" height="72" loading="lazy"><div><h4>FARVO Digital Company</h4><p class="tagline">Code · Design · Create</p></div></div>
+      <p data-en="Building digital solutions through technology, creativity, and innovation." data-ta="தொழில்நுட்பம், படைப்பாற்றல் மற்றும் புதுமை மூலம் டிஜிட்டல் தீர்வுகளை உருவாக்குகிறோம்.">Building digital solutions through technology, creativity, and innovation.</p>
+      <p class="credit"><span data-en="Built by" data-ta="உருவாக்கியவர்:">Built by</span> <a href="https://farvodigital.netlify.app" target="_blank" rel="noopener noreferrer">FARVO Digital Company</a></p>
+    </div>
+    <div>
+      <h4 data-en="Quick Links" data-ta="விரைவு இணைப்புகள்">Quick Links</h4>
+      <a href="#home" data-en="Home" data-ta="முகப்பு">Home</a>
+      <a href="#steps" data-en="Learning Steps" data-ta="கற்றல் படிகள்">Learning Steps</a>
+      <a href="#studio" data-en="Prompt Studio" data-ta="Prompt Studio">Prompt Studio</a>
+      <a href="#workflow" data-en="AI Project Workflow" data-ta="AI திட்ட செயல்முறை">AI Project Workflow</a>
+      <a href="#faq" data-en="FAQ" data-ta="கேள்விகள்">FAQ</a>
+    </div>
+    <div>
+      <h4 data-en="Connect with Us" data-ta="எங்களுடன் இணையுங்கள்">Connect with Us</h4>
+      <a class="ic" href="https://www.linkedin.com/in/mohamedfarhan-it" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.1c.5-1 1.8-1.9 3.7-1.9 4 0 4.6 2.6 4.6 6V21h-4v-5c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg><span>LinkedIn – Mohamed Farhan</span></a>
+      <a class="ic" href="https://farvodigital.netlify.app" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 2c.8 1 1.7 3 2 7h-4c.3-4 1.2-6 2-7zM4.3 13h3.2a15 15 0 0 0 1 4.6A8 8 0 0 1 4.3 13zm11.2 4.6a15 15 0 0 0 1-4.6h3.2a8 8 0 0 1-4.2 4.6z"/></svg><span data-en="Company Portfolio" data-ta="நிறுவன Portfolio">Company Portfolio</span></a>
+      <a class="ic" href="https://farvodigital.netlify.app/personal" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zm0 2c-4.4 0-8 2.2-8 5v2h16v-2c0-2.8-3.6-5-8-5z"/></svg><span data-en="Personal Portfolio" data-ta="தனிப்பட்ட Portfolio">Personal Portfolio</span></a>
+    </div>
+  </div>
+  <div class="copy">
+    <p>© 2026 <a href="https://farvodigital.netlify.app" target="_blank" rel="noopener noreferrer">FARVO Digital Company</a>. <span data-en="All Rights Reserved." data-ta="அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.">All Rights Reserved.</span></p>
+    <p><span data-en="Built with" data-ta="அன்புடன் உருவாக்கியது">Built with</span> ❤️ <span data-en="by" data-ta="–">by</span> <a href="https://farvodigital.netlify.app" target="_blank" rel="noopener noreferrer">FARVO Digital Company</a></p>
+  </div>
+</footer>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="text-align:center;padding:16px">Please enable JavaScript to use the guide and Prompt Studio.</p></noscript>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/studio.js"></script>
+</body>
+</html>
